@@ -51,24 +51,30 @@ public class ListSortIntegersToRangesApp {
             }
             System.out.println();
             
-            //Below to convert each integer to a string, assigned to s1 each time.
-            //Want to convert each integer to a separate string instead.
-            int i=0;
-            while(i<7){
-                String s1 = String.valueOf(integer_in_array[i]);
-                System.out.print(s1+",");
-                i++;
+//Below, added method which prints out the numbers in the format required. They may
+          //still be integers though. It does not work properly with negatives.
+            for (int i = 0; i<7; i++ ) {
+                if (i==6) {
+                    System.out.print(integer_in_array[i]);
+                    break;
+                }
+                else if (i==0 && integer_in_array[i] != (integer_in_array[i+1]-1)) {
+                    System.out.print(integer_in_array[i]+",");
+                }
+                else if (i==0 && integer_in_array[i] == (integer_in_array[i+1]-1)) {
+                    System.out.print(integer_in_array[i]+":");
+                }
+                else if(integer_in_array[i] != (integer_in_array[i+1]-1)) {
+                    System.out.print(integer_in_array[i]+",");
+                }
+                else if(integer_in_array[i] == (integer_in_array[i+1]-1) && integer_in_array[i] != (integer_in_array[i-1]+1) ) {
+                    System.out.print(integer_in_array[i]+":");
+                }
+                else if(integer_in_array[i] == (integer_in_array[i+1]-1) && integer_in_array[i] == (integer_in_array[i-1]+1) ) {
+                    
+                }
             }
-            
-            
-            
-            //for (int sorted_array = 0; sorted_array < 7; sorted_array++) {
-                
-                //new Integer(sorted_string) = toString(integer_in_array[sorted_array]);
-                //System.out.print(sorted_string);
-                
-                //new Integer().toString(integer_in_array[sorted_array]);
-            //}
+            System.out.println();
             
 
     }
