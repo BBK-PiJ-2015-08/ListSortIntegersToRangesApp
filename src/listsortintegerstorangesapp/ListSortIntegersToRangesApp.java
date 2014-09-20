@@ -51,10 +51,6 @@ public class ListSortIntegersToRangesApp {
             System.out.println();
 
             //Printing out the list in the format required.
-            for(int print = 0; print<7; print++) {
-                System.out.print(integer_in_array[print]+ " ");
-            }
-            System.out.println();
             
     //Below, added method which prints out the numbers in the format required. They may
           //still be integers though. It does not work properly with negatives.
