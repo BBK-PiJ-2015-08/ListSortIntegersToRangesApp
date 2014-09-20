@@ -54,9 +54,9 @@ public class ListSortIntegersToRangesApp {
 //Below, added method which prints out the numbers in the format required. They may
           //still be integers though. It does not work properly with negatives.
             for (int i = 0; i<7; i++ ) {
-                //The code block below handles what to do if the next number is the same as the current number.
-                //To avoid duplicate numbers, this does not print the current number, so only the final identical number
-                //in the sorted sequence prints.
+                //The first if statement below handles what to do if the next number is the same as the current number.
+                //When this is the case it will not print the current number, because to avoid duplicate numbers only the
+                //final identical number in the sorted sequence prints.
                 if(i<6 && integer_in_array[i] == (integer_in_array[i+1])) {
                 
                 }
