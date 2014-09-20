@@ -26,6 +26,7 @@ public class ListSortIntegersToRangesApp {
         /** Create the range of numbers. Possibly later take an input for,
          * or generate a random list of numbers. These are in an array.
          **/
+        //Adding this bit inside an interface to make the method static
         Scanner input = new Scanner(System.in);
         
             System.out.print("Type 7 numbers to sort: ");
@@ -49,6 +50,26 @@ public class ListSortIntegersToRangesApp {
                 System.out.print(integer_in_array[print]+ " ");
             }
             System.out.println();
+            
+            //Below to convert each integer to a string, assigned to s1 each time.
+            //Want to convert each integer to a separate string instead.
+            int i=0;
+            while(i<7){
+                String s1 = String.valueOf(integer_in_array[i]);
+                System.out.print(s1+",");
+                i++;
+            }
+            
+            
+            
+            //for (int sorted_array = 0; sorted_array < 7; sorted_array++) {
+                
+                //new Integer(sorted_string) = toString(integer_in_array[sorted_array]);
+                //System.out.print(sorted_string);
+                
+                //new Integer().toString(integer_in_array[sorted_array]);
+            //}
+            
 
     }
 
