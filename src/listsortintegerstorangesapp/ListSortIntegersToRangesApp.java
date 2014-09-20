@@ -34,17 +34,17 @@ public class ListSortIntegersToRangesApp {
          **/
         Scanner input = new Scanner(System.in);
         
-            System.out.print("Enter 7 numbers to sort: ");
+            System.out.print("Type 7 numbers to sort: ");
             int numbers;
-            int[] num_in_array = new int[7];
-            for(int enter_num=0; enter_num<7; enter_num++) {
-                num_in_array[enter_num] = input.nextInt();
+            int[] integer_in_array = new int[7];
+            for(int typed_integer=0; typed_integer<7; typed_integer++) {
+                integer_in_array[typed_integer] = input.nextInt();
                 
-                for(int sort_num=0; sort_num<7; sort_num++) {
-                    if(num_in_array[enter_num] < num_in_array[sort_num]) {
-                        int swap = num_in_array[enter_num];
-                        num_in_array[enter_num] = num_in_array[sort_num];
-                        num_in_array[sort_num] = swap;
+                for(int sort_integer=0; sort_integer<7; sort_integer++) {
+                    if(integer_in_array[typed_integer] < integer_in_array[sort_integer]) {
+                        int swap = integer_in_array[typed_integer];
+                        integer_in_array[typed_integer] = integer_in_array[sort_integer];
+                        integer_in_array[sort_integer] = swap;
                     }
                 }
             }
@@ -52,9 +52,11 @@ public class ListSortIntegersToRangesApp {
             System.out.println("All of the numbers in order: ");
             
             for(int print = 0; print<7; print++) {
-                System.out.print(num_in_array[print]+ " ");
+                System.out.print(integer_in_array[print]+ " ");
             }
             System.out.println();
+            
+            
                 
         // Commented out to take input of numbers/int[] numbers = {5, 3, 4, 13, 12, 14, 20};
         //Print the entire array, as is.
@@ -63,24 +65,26 @@ public class ListSortIntegersToRangesApp {
         //       for these numbers   System.out.println(numbers[i]); 
             //below i print any numbers where the difference between the number and the next number in the array
             //is exactly 1. Yes, this works.
-            for (int i = 0; i<5; i++ ) {
+// commented     for (int i = 0; i<5; i++ ) {
                 //if(i=)
                 
-                if (num_in_array[i]==(num_in_array[i+1]-1)) {
-                    if(num_in_array[i+1] != (num_in_array[i+2]-1)){
-                        System.out.println(num_in_array[i]+":"+num_in_array[i+1] );
-                        i++;
-                    }
+//              if (num_in_array[i]==(num_in_array[i+1]-1)) {
+//                  if(num_in_array[i+1] != (num_in_array[i+2]-1)){
+//                      System.out.println(num_in_array[i]+":"+num_in_array[i+1] );
+//                      i++;
+//                  }
                     
 
                     
-                }
-                else {
-                    System.out.println(num_in_array[i]+", ");
-                }
+//              }
+//              else {
+//                  System.out.println(num_in_array[i]+", ");
+//              }
                 
-            }
+//          }
+
     }
+
         //check
 
         
