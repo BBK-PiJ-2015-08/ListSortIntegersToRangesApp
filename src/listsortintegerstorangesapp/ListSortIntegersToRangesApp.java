@@ -32,14 +32,56 @@ public class ListSortIntegersToRangesApp {
         /** Create the range of numbers. Possibly later take an input for,
          * or generate a random list of numbers. These are in an array.
          **/
-        int[] numbers = {5, 3, 4, 13, 12, 14, 20};
+        Scanner input = new Scanner(System.in);
+        
+            System.out.print("Enter 7 numbers to sort: ");
+            int numbers;
+            int[] num_in_array = new int[7];
+            for(int enter_num=0; enter_num<7; enter_num++) {
+                num_in_array[enter_num] = input.nextInt();
+                
+                for(int sort_num=0; sort_num<7; sort_num++) {
+                    if(num_in_array[enter_num] < num_in_array[sort_num]) {
+                        int swap = num_in_array[enter_num];
+                        num_in_array[enter_num] = num_in_array[sort_num];
+                        num_in_array[sort_num] = swap;
+                    }
+                }
+            }
+            
+            System.out.println("All of the numbers in order: ");
+            
+            for(int print = 0; print<7; print++) {
+                System.out.print(num_in_array[print]+ " ");
+            }
+            System.out.println();
+                
+        // Commented out to take input of numbers/int[] numbers = {5, 3, 4, 13, 12, 14, 20};
         //Print the entire array, as is.
-        for (int i = 0; i < 7; i++) {
-            //Assumption that number of integers in array is equal to 7.
-           System.out.println(numbers[i]); 
-        }
+        // Commented/ for (int i = 0; i < 7; i++) {
+        //    out to try input    //Assumption that number of integers in array is equal to 7.
+        //       for these numbers   System.out.println(numbers[i]); 
+            //below i print any numbers where the difference between the number and the next number in the array
+            //is exactly 1. Yes, this works.
+            for (int i = 0; i<5; i++ ) {
+                //if(i=)
+                
+                if (num_in_array[i]==(num_in_array[i+1]-1)) {
+                    if(num_in_array[i+1] != (num_in_array[i+2]-1)){
+                        System.out.println(num_in_array[i]+":"+num_in_array[i+1] );
+                        i++;
+                    }
+                    
+
+                    
+                }
+                else {
+                    System.out.println(num_in_array[i]+", ");
+                }
+                
+            }
+    }
         //check
 
         
     }
-}
