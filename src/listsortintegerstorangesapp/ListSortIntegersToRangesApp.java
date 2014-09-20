@@ -54,7 +54,13 @@ public class ListSortIntegersToRangesApp {
 //Below, added method which prints out the numbers in the format required. They may
           //still be integers though. It does not work properly with negatives.
             for (int i = 0; i<7; i++ ) {
-                if (i==6) {
+                //The code block below handles what to do if the next number is the same as the current number.
+                //To avoid duplicate numbers, this does not print the current number, so only the final identical number
+                //in the sorted sequence prints.
+                if(i<6 && integer_in_array[i] == (integer_in_array[i+1])) {
+                
+                }
+                else if (i==6) {
                     System.out.print(integer_in_array[i]);
                     break;
                 }
@@ -64,6 +70,7 @@ public class ListSortIntegersToRangesApp {
                 else if (i==0 && integer_in_array[i] == (integer_in_array[i+1]-1)) {
                     System.out.print(integer_in_array[i]+":");
                 }
+                
                 else if(integer_in_array[i] != (integer_in_array[i+1]-1)) {
                     System.out.print(integer_in_array[i]+",");
                 }
@@ -73,7 +80,9 @@ public class ListSortIntegersToRangesApp {
                 else if(integer_in_array[i] == (integer_in_array[i+1]-1) && integer_in_array[i] == (integer_in_array[i-1]+1) ) {
                     
                 }
+
             }
+//The above works, it doesn't utilise "static string ranges(int[] numbers) {}" though.
             System.out.println();
             
 
