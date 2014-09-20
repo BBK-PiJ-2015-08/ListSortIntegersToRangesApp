@@ -12,6 +12,7 @@
  */
 package listsortintegerstorangesapp;
 import java.util.*;
+import java.lang.*;
 /**
  *
  * @author jade
@@ -58,48 +59,53 @@ public class ListSortIntegersToRangesApp {
                 //When this is the case it will not print the current number, because to avoid duplicate numbers only the
                 //final identical number in the sorted sequence prints.
                 if(i<6 && numbers[i] == (numbers[i+1])) {
-                
+                    String stringI = Integer.toString(numbers[i]);
                 }
                 else if (i==6) {
-                    String stringI = new String(numbers[i]+" ");
-                    System.out.print(stringI);
+                    String stringK = Integer.toString(numbers[i]);
+                    System.out.print(stringK);
                     break;
                 }
                 else if (i==0 && numbers[i] != (numbers[i+1]-1)) {
                     //System.out.print(numbers[i]+",");
-                    String stringA = new String(numbers[i]+",");
-                    System.out.print(stringA);
+                    String stringB = Integer.toString(numbers[i])+",";
+                    //        new String(numbers[i]+",");
+                    System.out.print(stringB);
                     
                 }
                 else if (i==0 && numbers[i] == (numbers[i+1]-1)) {
                     //System.out.print(numbers[i]+":");
-                    String stringB = new String(numbers[i]+":");
-                    System.out.print(stringB);
+                    String stringC = Integer.toString(numbers[i])+":";
+                    //      new String(numbers[i]+":");
+                    System.out.print(stringC);
                 }
                 //If the current number is the same as the previous number and the next number, do not print anything.
                 else if (numbers[i] == numbers[i-1] && numbers[i] == numbers[i+1]){
-                    String stringC = new String(numbers[i]);
+                    String stringD = Integer.toString(numbers[i]);
+                    //      new String(numbers[i]);
                 }
                 //If the current number is preceded by a consecutive number and the current number is the same as the next number, don't print.
                 else if (numbers[i] == (numbers[i-1]+1) && numbers[i] == numbers[i+1]){
-                    String stringD = new String(numbers[i]);
+                    String stringE = Integer.toString(numbers[i]);
                 }
                 //If the current number is the same as the previous number and followed by a consecutive number, don't print it.
                 else if (numbers[i] == (numbers[i-1]) && numbers[i] == (numbers[i+1])-1 ){
-                    String stringE = new String(numbers[i]);
+                    String stringF = Integer.toString(numbers[i]);
                 }
                 else if(numbers[i] != (numbers[i+1]-1)) {
                     //System.out.print(numbers[i]+",");
-                    String stringF = new String(numbers[i]+",");
-                    System.out.print(stringF);
+                    String stringG = Integer.toString(numbers[i])+",";
+                    //      new String(numbers[i]+",");
+                    System.out.print(stringG);
                 }
                 else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
                     //System.out.print(numbers[i]+":");
-                    String stringG = new String(numbers[i]+":");
-                    System.out.print(stringG);
+                    String stringH = Integer.toString(numbers[i])+":";
+                    //      new String(numbers[i]+":");
+                    System.out.print(stringH);
                 }
                 else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
-                    String stringH = new String(numbers[i]);
+                    String stringI = Integer.toString(numbers[i]);
                 }
 
             }
