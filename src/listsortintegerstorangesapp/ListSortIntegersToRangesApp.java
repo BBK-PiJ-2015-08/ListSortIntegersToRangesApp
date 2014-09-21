@@ -39,10 +39,10 @@ public class ListSortIntegersToRangesApp {
         
             System.out.print("Type 7 numbers to sort: ");
             int[] numbers = new int[7];
-            for(int typed_integer=0; typed_integer<7; typed_integer++) {
+            for(int typed_integer=0; typed_integer<numbers.length; typed_integer++) {
                 numbers[typed_integer] = input.nextInt();
                 
-                for(int sort_integer=0; sort_integer<7; sort_integer++) {
+                for(int sort_integer=0; sort_integer<numbers.length; sort_integer++) {
                     if(numbers[typed_integer] < numbers[sort_integer]) {
                         int swap = numbers[typed_integer];
                         numbers[typed_integer] = numbers[sort_integer];
@@ -53,7 +53,7 @@ public class ListSortIntegersToRangesApp {
             
             System.out.println("All of the numbers in order: ");
             
-            for(int print = 0; print<7; print++) {
+            for(int print = 0; print<numbers.length; print++) {
                 System.out.print(numbers[print]+ " ");
             }
             System.out.println();
