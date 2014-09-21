@@ -26,10 +26,19 @@ public class ListSortIntegersToRangesApp {
             static String sequence;
 
     public static void main(String[] args) {
+        int[] removeThis = new int[5];
+        ranges(removeThis);
+    }
+    /**
+     *
+     * @param numbers
+     * @return
+     */
+    static String ranges(int[] numbers) {
         /** Ask user to decide the size of the array.**/        
         Scanner input = new Scanner(System.in);
             System.out.print("How many numbers would you like the array to contain? ");
-            int[] numbers = new int[input.nextInt()];
+            numbers = new int[input.nextInt()];
             
         /** Ask user to type in values for the array.**/            
             System.out.print("Type in the numbers you wish to sort: ");
@@ -117,13 +126,6 @@ public class ListSortIntegersToRangesApp {
             //System.out.println(sequence);
             
 //            ranges();
-    }
-    /**
-     *
-     * @param numbers
-     * @return
-     */
-    static String ranges(int[] numbers) {
         return ranges;
     
     }
