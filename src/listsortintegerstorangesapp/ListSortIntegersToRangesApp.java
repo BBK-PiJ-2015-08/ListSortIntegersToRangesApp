@@ -22,13 +22,13 @@ public class ListSortIntegersToRangesApp {
      * @param args the command line arguments
      */
     // Declare the variables before the if
-            static String stringA;
-            static String stringB;
-            static String stringC;
-            static String stringD;
-            static String stringE;
-            static String stringF;
-            static String stringG;
+            static String string;
+            //static String stringB;
+            //static String stringC;
+            //static String stringD;
+            //static String stringE;
+            //static String stringF;
+            //static String stringG;
             static String masterString;
 
     public static void main(String[] args) {
@@ -61,126 +61,50 @@ public class ListSortIntegersToRangesApp {
 
             //Printing out the list in the format required, for debugging.
     //Below, added method which prints out the numbers in the format required. It does not work properly with negatives.
-            for (int i = 0; i<7; i++ ) {
+            for (int i = 0; i<numbers.length; i++ ) {
                 
                 if     (i==0)    {
                     if (numbers[i] == numbers[i+1]) {
-                        stringA = Integer.toString(numbers[i])+":";
+                        string = Integer.toString(numbers[i])+":";
                         //System.out.print(stringA);
-                        masterString = stringA;
+                        masterString = string;
                     }
                     else if (numbers[i] != (numbers[i+1]-1)) {
-                        stringA = Integer.toString(numbers[i])+",";
+                        string = Integer.toString(numbers[i])+",";
                         //System.out.print(stringA);
-                        masterString = stringA;
+                        masterString = string;
                     }
                     else if (numbers[i] == (numbers[i+1]-1)) {
-                        stringA = Integer.toString(numbers[i])+":";
+                        string = Integer.toString(numbers[i])+":";
                         //System.out.print(stringA);
-                        masterString = stringA;
+                        masterString = string;
                     }
                 }
 
-                else if (i==1)   {
+                else if (i>0 && i<(numbers.length)-1)   {
                     if (numbers[i] == numbers[i-1] || numbers[i] == numbers[i+1]) {
-                        stringB = Integer.toString(numbers[i]);
+                        string = Integer.toString(numbers[i]);
                     }
                     else if(numbers[i] != (numbers[i+1]-1)) {
-                        stringB = Integer.toString(numbers[i])+",";
+                        string = Integer.toString(numbers[i])+",";
                         //System.out.print(stringB);
-                        masterString = masterString + stringB;
+                        masterString = masterString + string;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
-                        stringB = Integer.toString(numbers[i])+":";
+                        string = Integer.toString(numbers[i])+":";
                         //System.out.print(stringB);
-                        masterString = masterString + stringB;
+                        masterString = masterString + string;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
-                        stringB = Integer.toString(numbers[i]);
+                        string = Integer.toString(numbers[i]);
                     }
 
                 }
 
-                else if (i==2)   {
-                    if (numbers[i] == numbers[i-1] || numbers[i] == numbers[i+1]) {
-                        stringC = Integer.toString(numbers[i]);
-                    }
-                    else if(numbers[i] != (numbers[i+1]-1)) {
-                        stringC = Integer.toString(numbers[i])+",";
-                        //System.out.print(stringC);
-                        masterString = masterString + stringC;
-                    }
-                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
-                        stringC = Integer.toString(numbers[i])+":";
-                        //System.out.print(stringC);
-                        masterString = masterString + stringC;
-                    }
-                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
-                        stringC = Integer.toString(numbers[i]);
-                    }
-                }
-
-                else if (i==3)   {
-                    if (numbers[i] == numbers[i-1] || numbers[i] == numbers[i+1]) {
-                        stringD = Integer.toString(numbers[i]);
-                    }
-                    else if(numbers[i] != (numbers[i+1]-1)) {
-                        stringD = Integer.toString(numbers[i])+",";
-                        //System.out.print(stringD);
-                        masterString = masterString + stringD;
-                    }
-                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
-                        stringD = Integer.toString(numbers[i])+":";
-                        //System.out.print(stringD);
-                        masterString = masterString + stringD;
-                    }
-                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
-                        stringD = Integer.toString(numbers[i]);
-                    }
-                }
-
-                else if (i==4)   {
-                    if (numbers[i] == numbers[i-1] || numbers[i] == numbers[i+1]) {
-                        stringE = Integer.toString(numbers[i]);
-                    }
-                    else if(numbers[i] != (numbers[i+1]-1)) {
-                        stringE = Integer.toString(numbers[i])+",";
-                        //System.out.print(stringE);
-                        masterString = masterString + stringE;
-                    }
-                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
-                        stringE = Integer.toString(numbers[i])+":";
-                        //System.out.print(stringE);
-                        masterString = masterString + stringE;
-                    }
-                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
-                        stringE = Integer.toString(numbers[i]);
-                    }
-                }
-
-                else if (i==5)   {
-                    if (numbers[i] == numbers[i-1] || numbers[i] == numbers[i+1]) {
-                        stringF = Integer.toString(numbers[i]);
-                    }
-                    else if(numbers[i] != (numbers[i+1]-1)) {
-                        stringF = Integer.toString(numbers[i])+",";
-                        //System.out.print(stringF);
-                        masterString = masterString + stringF;
-                    }
-                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
-                        stringF = Integer.toString(numbers[i])+":";
-                        //System.out.print(stringF);
-                        masterString = masterString + stringF;
-                    }
-                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
-                        stringF = Integer.toString(numbers[i]);
-                    }
-                }
-
-                else if (i==6)   {
-                    stringG = Integer.toString(numbers[i]);
+                else if (i<numbers.length)   {
+                    string = Integer.toString(numbers[i]);
                     //System.out.print(stringG);
-                    masterString = masterString + stringG;
+                    masterString = masterString + string;
                     break;
                 }
             }
