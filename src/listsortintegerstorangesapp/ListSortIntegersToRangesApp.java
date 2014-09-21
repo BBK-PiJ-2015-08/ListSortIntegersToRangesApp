@@ -23,12 +23,6 @@ public class ListSortIntegersToRangesApp {
      */
     // Declare the variables before the if
             static String string;
-            //static String stringB;
-            //static String stringC;
-            //static String stringD;
-            //static String stringE;
-            //static String stringF;
-            //static String stringG;
             static String masterString;
 
     public static void main(String[] args) {
