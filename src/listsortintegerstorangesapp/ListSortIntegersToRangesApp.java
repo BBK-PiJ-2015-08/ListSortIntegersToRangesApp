@@ -129,7 +129,7 @@ public class ListSortIntegersToRangesApp {
 
             }
             System.out.println();
-            System.out.println("A string: " + stringA + stringB + stringC + stringD + stringE + stringF + stringG + stringH + stringI + stringJ + stringK);
+            System.out.println("A string: " + stringB + stringG + stringK);
 
     }
        
