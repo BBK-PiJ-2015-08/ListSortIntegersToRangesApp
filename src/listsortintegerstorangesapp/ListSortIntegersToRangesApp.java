@@ -21,19 +21,18 @@ public class ListSortIntegersToRangesApp {
     /**
      * @param args the command line arguments
      */
-    // Declare the variables before the if
             static String string;
             static String masterString;
+            static String ranges;
 
     public static void main(String[] args) {
-        //System.out.print("This thing is on");
-        /** Create the range of numbers. Possibly later take an input for,
-         * or generate a random list of numbers. These are in an array.
-         **/
+        /** Ask user to decide the size of the array.**/
+        
         Scanner input = new Scanner(System.in);
-            System.out.print("How many numbers would you like the array to contain?");
+            System.out.print("How many numbers would you like the array to contain? ");
             int[] numbers = new int[input.nextInt()];
             
+        /** Ask user to type in values for the array.**/            
             System.out.print("Type in the numbers you wish to sort: ");
             
             for(int typed_integer=0; typed_integer<numbers.length; typed_integer++) {
@@ -106,11 +105,9 @@ public class ListSortIntegersToRangesApp {
             }
             System.out.println();
             
-            System.out.print(masterString);
-            //String ranges = (stringA + stringB + stringC + stringD + stringE + stringF + stringG);
+            ranges = masterString;
             
-            //System.out.println("Ranges: "+ranges);
-
+            System.out.println("Ranges: "+ranges);
     }
        
 }
