@@ -41,10 +41,6 @@ public class ListSortIntegersToRangesApp {
      * @return
      */
     static String ranges(int[] numbers) {
-            
-            for(int print = 0; print<numbers.length; print++) {
-                
-            }
 
             for (int i = 0; i<numbers.length; i++ ) {
                 
