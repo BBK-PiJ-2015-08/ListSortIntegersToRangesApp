@@ -68,7 +68,7 @@ public class ListSortIntegersToRangesApp {
                 }
                 else if (i==0 && numbers[i] != (numbers[i+1]-1)) {
                     //System.out.print(numbers[i]+",");
-                    String stringB = Integer.toString(numbers[i])+":";
+                    String stringA = Integer.toString(numbers[i])+":";
                     //        new String(numbers[i]+",");
                     System.out.print(stringA);
                     
