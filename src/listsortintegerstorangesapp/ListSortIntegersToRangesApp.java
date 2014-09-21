@@ -174,7 +174,6 @@ public class ListSortIntegersToRangesApp {
             String ranges = (stringA + stringB + stringC + stringD + stringE + stringF + stringG);
             
             System.out.println("Ranges: "+ranges);
-            
 
     }
        
