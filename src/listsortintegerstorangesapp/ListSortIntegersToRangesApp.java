@@ -33,6 +33,7 @@ public class ListSortIntegersToRangesApp {
             static String stringI;
             static String stringJ;
             static String stringK;
+            
     public static void main(String[] args) {
         //System.out.print("This thing is on");
         /** Create the range of numbers. Possibly later take an input for,
