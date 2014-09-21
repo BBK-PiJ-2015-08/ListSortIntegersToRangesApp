@@ -99,5 +99,14 @@ public class ListSortIntegersToRangesApp {
             
             System.out.println("Ranges: "+ranges);
     }
+    /**
+     *
+     * @param numbers
+     * @return
+     */
+    public static String ranges(int[] numbers) {
+        return ranges;
+    
+    }
 
 }
