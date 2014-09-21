@@ -29,6 +29,7 @@ public class ListSortIntegersToRangesApp {
             static String stringE;
             static String stringF;
             static String stringG;
+            static String stringH;
 
     public static void main(String[] args) {
         //System.out.print("This thing is on");
@@ -36,9 +37,13 @@ public class ListSortIntegersToRangesApp {
          * or generate a random list of numbers. These are in an array.
          **/
         Scanner input = new Scanner(System.in);
+//NEW        //Trying to get user to choose size of array
+        System.out.print("How many numbers would you like the array to contain?");
+        int[] numbers = new int[input.nextInt()];
         
-            System.out.print("Type 7 numbers to sort: ");
-            int[] numbers = new int[7];
+        
+            System.out.print("Type in the numbers you wish to sort: ");
+//          int[] numbers = new int[7];
             for(int typed_integer=0; typed_integer<numbers.length; typed_integer++) {
                 numbers[typed_integer] = input.nextInt();
                 
@@ -60,7 +65,7 @@ public class ListSortIntegersToRangesApp {
 
             //Printing out the list in the format required, for debugging.
     //Below, added method which prints out the numbers in the format required. It does not work properly with negatives.
-            for (int i = 0; i<7; i++ ) {
+            for (int i = 0; i<numbers.length; i++ ) {
                 
                 if     (i==0)    {
                     if (numbers[i] == numbers[i+1]) {
@@ -162,10 +167,27 @@ public class ListSortIntegersToRangesApp {
                         stringF = Integer.toString(numbers[i]);
                     }
                 }
-
+                //test. If fails, update block below to i==6 and string name to stringG
                 else if (i==6)   {
-                    stringG = Integer.toString(numbers[i]);
-                    System.out.print(stringG);
+                    if (numbers[i] == numbers[i-1] || numbers[i] == numbers[i+1]) {
+                        stringG = Integer.toString(numbers[i]);
+                    }
+                    else if(numbers[i] != (numbers[i+1]-1)) {
+                        stringG = Integer.toString(numbers[i])+",";
+                        System.out.print(stringG);
+                    }
+                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
+                        stringG = Integer.toString(numbers[i])+":";
+                        System.out.print(stringG);
+                    }
+                    else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
+                        stringG = Integer.toString(numbers[i]);
+                    }
+                }
+
+                else if (i==7)   {
+                    stringH = Integer.toString(numbers[i]);
+                    System.out.print(stringH);
                     break;
                 }
             }
