@@ -123,10 +123,10 @@ public class ListSortIntegersToRangesApp {
      * @param numbers
      * @return
      */
-/**    static String ranges(int[] numbers) {
+    static String ranges(int[] numbers) {
         return ranges;
     
     }
-    **/
+    
 
 }
