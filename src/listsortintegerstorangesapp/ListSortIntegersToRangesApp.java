@@ -29,6 +29,7 @@ public class ListSortIntegersToRangesApp {
             static String stringE;
             static String stringF;
             static String stringG;
+            static String masterString;
 
     public static void main(String[] args) {
         //System.out.print("This thing is on");
@@ -65,15 +66,18 @@ public class ListSortIntegersToRangesApp {
                 if     (i==0)    {
                     if (numbers[i] == numbers[i+1]) {
                         stringA = Integer.toString(numbers[i])+":";
-                        System.out.print(stringA);
+                        //System.out.print(stringA);
+                        masterString = stringA;
                     }
                     else if (numbers[i] != (numbers[i+1]-1)) {
                         stringA = Integer.toString(numbers[i])+",";
-                        System.out.print(stringA);
+                        //System.out.print(stringA);
+                        masterString = stringA;
                     }
                     else if (numbers[i] == (numbers[i+1]-1)) {
                         stringA = Integer.toString(numbers[i])+":";
-                        System.out.print(stringA);
+                        //System.out.print(stringA);
+                        masterString = stringA;
                     }
                 }
 
@@ -83,11 +87,13 @@ public class ListSortIntegersToRangesApp {
                     }
                     else if(numbers[i] != (numbers[i+1]-1)) {
                         stringB = Integer.toString(numbers[i])+",";
-                        System.out.print(stringB);
+                        //System.out.print(stringB);
+                        masterString = masterString + stringB;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
                         stringB = Integer.toString(numbers[i])+":";
-                        System.out.print(stringB);
+                        //System.out.print(stringB);
+                        masterString = masterString + stringB;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
                         stringB = Integer.toString(numbers[i]);
@@ -101,11 +107,13 @@ public class ListSortIntegersToRangesApp {
                     }
                     else if(numbers[i] != (numbers[i+1]-1)) {
                         stringC = Integer.toString(numbers[i])+",";
-                        System.out.print(stringC);
+                        //System.out.print(stringC);
+                        masterString = masterString + stringC;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
                         stringC = Integer.toString(numbers[i])+":";
-                        System.out.print(stringC);
+                        //System.out.print(stringC);
+                        masterString = masterString + stringC;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
                         stringC = Integer.toString(numbers[i]);
@@ -118,11 +126,13 @@ public class ListSortIntegersToRangesApp {
                     }
                     else if(numbers[i] != (numbers[i+1]-1)) {
                         stringD = Integer.toString(numbers[i])+",";
-                        System.out.print(stringD);
+                        //System.out.print(stringD);
+                        masterString = masterString + stringD;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
                         stringD = Integer.toString(numbers[i])+":";
-                        System.out.print(stringD);
+                        //System.out.print(stringD);
+                        masterString = masterString + stringD;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
                         stringD = Integer.toString(numbers[i]);
@@ -135,11 +145,13 @@ public class ListSortIntegersToRangesApp {
                     }
                     else if(numbers[i] != (numbers[i+1]-1)) {
                         stringE = Integer.toString(numbers[i])+",";
-                        System.out.print(stringE);
+                        //System.out.print(stringE);
+                        masterString = masterString + stringE;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
                         stringE = Integer.toString(numbers[i])+":";
-                        System.out.print(stringE);
+                        //System.out.print(stringE);
+                        masterString = masterString + stringE;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
                         stringE = Integer.toString(numbers[i]);
@@ -152,11 +164,13 @@ public class ListSortIntegersToRangesApp {
                     }
                     else if(numbers[i] != (numbers[i+1]-1)) {
                         stringF = Integer.toString(numbers[i])+",";
-                        System.out.print(stringF);
+                        //System.out.print(stringF);
+                        masterString = masterString + stringF;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
                         stringF = Integer.toString(numbers[i])+":";
-                        System.out.print(stringF);
+                        //System.out.print(stringF);
+                        masterString = masterString + stringF;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
                         stringF = Integer.toString(numbers[i]);
@@ -165,15 +179,17 @@ public class ListSortIntegersToRangesApp {
 
                 else if (i==6)   {
                     stringG = Integer.toString(numbers[i]);
-                    System.out.print(stringG);
+                    //System.out.print(stringG);
+                    masterString = masterString + stringG;
                     break;
                 }
             }
             System.out.println();
             
-            String ranges = (stringA + stringB + stringC + stringD + stringE + stringF + stringG);
+            System.out.print(masterString);
+            //String ranges = (stringA + stringB + stringC + stringD + stringE + stringF + stringG);
             
-            System.out.println("Ranges: "+ranges);
+            //System.out.println("Ranges: "+ranges);
 
     }
        
