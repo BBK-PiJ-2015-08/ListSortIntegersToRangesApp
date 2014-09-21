@@ -48,20 +48,19 @@ public class ListSortIntegersToRangesApp {
                 System.out.print(numbers[print]+ " ");
             }
             System.out.println();
-            System.out.println();
 
 // Declare the variables before the if
-            String stringA = null;
-            String stringB = null;
-            String stringC = null;
-            String stringD = null;
-            String stringE = null;
-            String stringF = null;
-            String stringG = null;
-            String stringH = null;
-            String stringI = null;
-            String stringJ = null;
-            String stringK = null;
+            String stringA;
+            String stringB;
+            String stringC;
+            String stringD;
+            String stringE;
+            String stringF;
+            String stringG;
+            String stringH;
+            String stringI;
+            String stringJ;
+            String stringK;
 
             //Printing out the list in the format required.
     //Below, added method which prints out the numbers in the format required. They may
@@ -78,21 +77,21 @@ public class ListSortIntegersToRangesApp {
                     System.out.print(stringK);
                     break;
                 }
+                else if (i==0 && numbers[i] == numbers[i+1]) {
+                    stringA = Integer.toString(numbers[i])+":";
+                    System.out.print(stringA);
+                }
                 else if (i==0 && numbers[i] != (numbers[i+1]-1)) {
                     //System.out.print(numbers[i]+",");
-                    stringA = Integer.toString(numbers[i])+",";
+                    stringB = Integer.toString(numbers[i])+",";
                     //        new String(numbers[i]+",");
-                    System.out.print(stringA);
+                    System.out.print(stringB);
                     
                 }
                 else if (i==0 && numbers[i] == (numbers[i+1]-1)) {
                     //System.out.print(numbers[i]+":");
-                    stringB = Integer.toString(numbers[i])+":";
-                    //      new String(numbers[i]+":");
-                    System.out.print(stringB);
-                }
-                else if (i==0 && numbers[i] == numbers[i+1]) {
                     stringC = Integer.toString(numbers[i])+":";
+                    //      new String(numbers[i]+":");
                     System.out.print(stringC);
                 }
                 //If the current number is the same as the previous number and the next number, do not print anything.
@@ -123,9 +122,12 @@ public class ListSortIntegersToRangesApp {
                 else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
                     stringI = Integer.toString(numbers[i]);
                 }
+                else {
+                    System.out.println();
+                }
 
             }
-
+            
             System.out.println();
 
     }
