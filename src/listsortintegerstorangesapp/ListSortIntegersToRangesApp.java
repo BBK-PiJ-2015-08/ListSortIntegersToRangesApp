@@ -83,22 +83,17 @@ public class ListSortIntegersToRangesApp {
                     System.out.print(stringA);
                 }
                 else if (i==0 && numbers[i] != (numbers[i+1]-1)) {
-                    //System.out.print(numbers[i]+",");
                     stringB = Integer.toString(numbers[i])+",";
-                    //        new String(numbers[i]+",");
                     System.out.print(stringB);
                     
                 }
                 else if (i==0 && numbers[i] == (numbers[i+1]-1)) {
-                    //System.out.print(numbers[i]+":");
                     stringC = Integer.toString(numbers[i])+":";
-                    //      new String(numbers[i]+":");
                     System.out.print(stringC);
                 }
                 //If the current number is the same as the previous number and the next number, do not print anything.
                 else if (numbers[i] == numbers[i-1] && numbers[i] == numbers[i+1]){
                     stringD = Integer.toString(numbers[i]);
-                    //      new String(numbers[i]);
                 }
                 //If the current number is preceded by a consecutive number and the current number is the same as the next number, don't print.
                 else if (numbers[i] == (numbers[i-1]+1) && numbers[i] == numbers[i+1]){
@@ -109,15 +104,11 @@ public class ListSortIntegersToRangesApp {
                     stringF = Integer.toString(numbers[i]);
                 }
                 else if(numbers[i] != (numbers[i+1]-1)) {
-                    //System.out.print(numbers[i]+",");
                     stringG = Integer.toString(numbers[i])+",";
-                    //      new String(numbers[i]+",");
                     System.out.print(stringG);
                 }
                 else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
-                    //System.out.print(numbers[i]+":");
                     stringH = Integer.toString(numbers[i])+":";
-                    //      new String(numbers[i]+":");
                     System.out.print(stringH);
                 }
                 else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
