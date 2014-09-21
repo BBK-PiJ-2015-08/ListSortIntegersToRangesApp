@@ -26,14 +26,9 @@ public class ListSortIntegersToRangesApp {
             static String sequence;
 
     public static void main(String[] args) {
-        int[] removeThis = new int[5];
-        removeThis[0] = 1;
-        removeThis[1] = 3;
-        removeThis[2] = 4;
-        removeThis[3] = 6;
-        removeThis[4] = 7;
-        ranges(removeThis);
-        System.out.println(ranges(removeThis));
+        int[] inputData = new int[] {1,3,4,6,7};
+        ranges(inputData);
+        System.out.println(ranges(inputData));
     }
     /**
      *
