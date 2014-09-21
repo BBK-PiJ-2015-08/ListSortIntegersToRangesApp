@@ -177,69 +177,6 @@ public class ListSortIntegersToRangesApp {
                     System.out.print(stringG);
                     break;
                 }
-/**
-///////////////Below is the original code
-                //have just replicated this for the first index.
-                if(i<6 && i!=0 && numbers[i] == (numbers[i+1])) {
-                    stringJ = Integer.toString(numbers[i]);
-                }
-                //Have replicated this 
-                else if (i==6) {
-                    stringK = Integer.toString(numbers[i]);
-                    System.out.print(stringK);
-                    break;
-                }
-                //Have replicated this
-                else if (i==0 && numbers[i] == numbers[i+1]) {
-                    stringA = Integer.toString(numbers[i])+":";
-                    System.out.print(stringA);
-                }
-                //Have replicated this
-                else if (i==0 && numbers[i] != (numbers[i+1]-1)) {
-                    stringB = Integer.toString(numbers[i])+",";
-                    System.out.print(stringB);
-                    
-                }
-                //Have replaced this by using an OR (||) condition if number is same as next or same as previous.
-                //Have replicated this
-                else if (i==0 && numbers[i] == (numbers[i+1]-1)) {
-                    stringC = Integer.toString(numbers[i])+":";
-                    System.out.print(stringC);
-                }
-                //Have replaced this by using an OR (||) condition if number is same as next or same as previous.
-                //If the current number is the same as the previous number and the next number, do not print anything.
-                else if (numbers[i] == numbers[i-1] && numbers[i] == numbers[i+1]){
-                    stringD = Integer.toString(numbers[i]);
-                }
-                //Have replaced this by using an OR (||) condition if number is same as next or same as previous.
-                //If the current number is preceded by a consecutive number and the current number is the same as the next number, don't print.
-                else if (numbers[i] == (numbers[i-1]+1) && numbers[i] == numbers[i+1]){
-                    stringE = Integer.toString(numbers[i]);
-                }
-                //Have replaced this by using an OR (||) condition if number is same as next or same as previous.
-                //If the current number is the same as the previous number and followed by a consecutive number, don't print it.
-                else if (numbers[i] == (numbers[i-1]) && numbers[i] == (numbers[i+1])-1 ){
-                    stringF = Integer.toString(numbers[i]);
-                }
-                //Have replicated this for index positions 1-5
-                else if(numbers[i] != (numbers[i+1]-1)) {
-                    stringG = Integer.toString(numbers[i])+",";
-                    System.out.print(stringG);
-                }
-                //Have replicated this for index positions 1-5
-                else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
-                    stringH = Integer.toString(numbers[i])+":";
-                    System.out.print(stringH);
-                }
-                //Have replicated this for index positions 1-5
-                else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
-                    stringI = Integer.toString(numbers[i]);
-                }
-                //Probably not necessary.
-                else {
-                    System.out.println();
-                } 
-                **/
 //Bracket below is the closure of the for loop.
             }
             System.out.println();
