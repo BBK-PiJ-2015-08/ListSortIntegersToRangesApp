@@ -27,6 +27,11 @@ public class ListSortIntegersToRangesApp {
 
     public static void main(String[] args) {
         int[] removeThis = new int[5];
+        removeThis[0] = 1;
+        removeThis[1] = 3;
+        removeThis[2] = 4;
+        removeThis[3] = 6;
+        removeThis[4] = 7;
         ranges(removeThis);
         System.out.print(ranges(removeThis));
     }
@@ -37,11 +42,11 @@ public class ListSortIntegersToRangesApp {
      */
     static String ranges(int[] numbers) {
         /** Ask user to decide the size of the array.**/        
-        Scanner input = new Scanner(System.in);
+        /**Scanner input = new Scanner(System.in);
             System.out.print("How many numbers would you like the array to contain? ");
             numbers = new int[input.nextInt()];
             
-        /** Ask user to type in values for the array.**/            
+        /** Ask user to type in values for the array.            
             System.out.print("Type in the numbers you wish to sort: ");
             
             for(int typed_integer=0; typed_integer<numbers.length; typed_integer++) {
@@ -57,11 +62,12 @@ public class ListSortIntegersToRangesApp {
             }
             
             System.out.println("All of the numbers in order: ");
+            **/
             
             for(int print = 0; print<numbers.length; print++) {
-                System.out.print(numbers[print]+ " ");
+                //System.out.print(numbers[print]+ " ");
             }
-            System.out.println();
+            //System.out.println();
 
             for (int i = 0; i<numbers.length; i++ ) {
                 
@@ -104,11 +110,11 @@ public class ListSortIntegersToRangesApp {
                     break;
                 }
             }
-            System.out.println();
+            //System.out.println();
             
             ranges = masterString;
             
-            System.out.println("Ranges: "+ranges);
+            //System.out.println("Ranges: "+ranges);
             
             //Attempting to convert the string back into an array
             //int[] sequence = new int[5];
