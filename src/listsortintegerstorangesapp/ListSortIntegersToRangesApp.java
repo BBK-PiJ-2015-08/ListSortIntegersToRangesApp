@@ -120,7 +120,42 @@ public class ListSortIntegersToRangesApp {
 
             }
             System.out.println();
-            System.out.println("A string: " + stringB + stringG + stringK);
+            //System.out.println("A string: " + stringB + stringG + stringK);
+     //Attempt to print only the values which are not null.
+            if (stringA != null) {
+                System.out.print(stringA);
+            }
+            if (stringB != null) {
+                System.out.print(stringB);
+            }
+            if (stringC != null) {
+                System.out.print(stringC);
+            }
+            if (stringD != null) {
+                System.out.print(stringD);
+            }
+            if (stringE != null) {
+                System.out.print(stringE);
+            }
+            if (stringF != null) {
+                System.out.print(stringF);
+            }
+            if (stringG != null) {
+                System.out.print(stringG);
+            }
+            if (stringH != null) {
+                System.out.print(stringH);
+            }
+            if (stringI != null) {
+                System.out.print(stringI);
+            }
+            if (stringJ != null) {
+                System.out.print(stringJ);
+            }
+            if (stringK != null) {
+                System.out.print(stringK);
+            }
+            
 
     }
        
