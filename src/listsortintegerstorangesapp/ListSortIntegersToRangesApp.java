@@ -31,9 +31,11 @@ public class ListSortIntegersToRangesApp {
          * or generate a random list of numbers. These are in an array.
          **/
         Scanner input = new Scanner(System.in);
-        
-            System.out.print("Type 7 numbers to sort: ");
-            int[] numbers = new int[7];
+            System.out.print("How many numbers would you like the array to contain?");
+            int[] numbers = new int[input.nextInt()];
+            
+            System.out.print("Type in the numbers you wish to sort: ");
+            
             for(int typed_integer=0; typed_integer<numbers.length; typed_integer++) {
                 numbers[typed_integer] = input.nextInt();
                 
