@@ -14,7 +14,6 @@ package listsortintegerstorangesapp;
 import java.util.*;
 import java.lang.*;
 /**
- *
  * @author jade
  */
 public class ListSortIntegersToRangesApp {
@@ -26,8 +25,7 @@ public class ListSortIntegersToRangesApp {
             static String ranges;
 
     public static void main(String[] args) {
-        /** Ask user to decide the size of the array.**/
-        
+        /** Ask user to decide the size of the array.**/        
         Scanner input = new Scanner(System.in);
             System.out.print("How many numbers would you like the array to contain? ");
             int[] numbers = new int[input.nextInt()];
@@ -54,24 +52,19 @@ public class ListSortIntegersToRangesApp {
             }
             System.out.println();
 
-            //Printing out the list in the format required, for debugging.
-    //Below, added method which prints out the numbers in the format required. It does not work properly with negatives.
             for (int i = 0; i<numbers.length; i++ ) {
                 
                 if     (i==0)    {
                     if (numbers[i] == numbers[i+1]) {
                         string = Integer.toString(numbers[i])+":";
-                        //System.out.print(stringA);
                         masterString = string;
                     }
                     else if (numbers[i] != (numbers[i+1]-1)) {
                         string = Integer.toString(numbers[i])+",";
-                        //System.out.print(stringA);
                         masterString = string;
                     }
                     else if (numbers[i] == (numbers[i+1]-1)) {
                         string = Integer.toString(numbers[i])+":";
-                        //System.out.print(stringA);
                         masterString = string;
                     }
                 }
@@ -82,12 +75,10 @@ public class ListSortIntegersToRangesApp {
                     }
                     else if(numbers[i] != (numbers[i+1]-1)) {
                         string = Integer.toString(numbers[i])+",";
-                        //System.out.print(stringB);
                         masterString = masterString + string;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
                         string = Integer.toString(numbers[i])+":";
-                        //System.out.print(stringB);
                         masterString = masterString + string;
                     }
                     else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
@@ -98,7 +89,6 @@ public class ListSortIntegersToRangesApp {
 
                 else if (i<numbers.length)   {
                     string = Integer.toString(numbers[i]);
-                    //System.out.print(stringG);
                     masterString = masterString + string;
                     break;
                 }
@@ -109,5 +99,5 @@ public class ListSortIntegersToRangesApp {
             
             System.out.println("Ranges: "+ranges);
     }
-       
+
 }
