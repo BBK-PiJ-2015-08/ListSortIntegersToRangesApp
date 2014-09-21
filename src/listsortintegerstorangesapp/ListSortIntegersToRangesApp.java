@@ -41,33 +41,10 @@ public class ListSortIntegersToRangesApp {
      * @return
      */
     static String ranges(int[] numbers) {
-        /** Ask user to decide the size of the array.**/        
-        /**Scanner input = new Scanner(System.in);
-            System.out.print("How many numbers would you like the array to contain? ");
-            numbers = new int[input.nextInt()];
-            
-        /** Ask user to type in values for the array.            
-            System.out.print("Type in the numbers you wish to sort: ");
-            
-            for(int typed_integer=0; typed_integer<numbers.length; typed_integer++) {
-                numbers[typed_integer] = input.nextInt();
-                
-                for(int sort_integer=0; sort_integer<numbers.length; sort_integer++) {
-                    if(numbers[typed_integer] < numbers[sort_integer]) {
-                        int swap = numbers[typed_integer];
-                        numbers[typed_integer] = numbers[sort_integer];
-                        numbers[sort_integer] = swap;
-                    }
-                }
-            }
-            
-            System.out.println("All of the numbers in order: ");
-            **/
             
             for(int print = 0; print<numbers.length; print++) {
-                //System.out.print(numbers[print]+ " ");
+                
             }
-            //System.out.println();
 
             for (int i = 0; i<numbers.length; i++ ) {
                 
@@ -110,29 +87,9 @@ public class ListSortIntegersToRangesApp {
                     break;
                 }
             }
-            //System.out.println();
             
             ranges = masterString;
             
-            //System.out.println("Ranges: "+ranges);
-            
-            //Attempting to convert the string back into an array
-            //int[] sequence = new int[5];
-            
-            //String[] sequence = ranges.split(",");
-            //for (int position = 0; position<sequence.length; position++){
-            //    if(sequence[position].equals(":")){
-            //        System.out.print("Uh oh");
-            //    }
-            //    else {
-            //        System.out.println("Array element contains "+sequence[position]);
-            //    }
-            //}
-
-            //int[] sequence = new int[numbers.length];
-            //System.out.println(sequence);
-            
-//            ranges();
         return ranges;
     
     }
