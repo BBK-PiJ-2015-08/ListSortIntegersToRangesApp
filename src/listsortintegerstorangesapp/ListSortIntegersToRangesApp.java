@@ -58,15 +58,10 @@ public class ListSortIntegersToRangesApp {
             }
             System.out.println();
 
-//Declaring variables moved from here.
-
-            //Printing out the list in the format required.
-    //Below, added method which prints out the numbers in the format required. They may
-          //still be integers though. It does not work properly with negatives.
+            //Printing out the list in the format required, for debugging.
+    //Below, added method which prints out the numbers in the format required. It does not work properly with negatives.
             for (int i = 0; i<7; i++ ) {
-                //The first if statement below handles what to do if the next number is the same as the current number.
-                //When this is the case it will not print the current number, because to avoid duplicate numbers only the
-                //final identical number in the sorted sequence prints.
+                
                 if     (i==0)    {
                     if (numbers[i] == numbers[i+1]) {
                         stringA = Integer.toString(numbers[i])+":";
@@ -173,7 +168,6 @@ public class ListSortIntegersToRangesApp {
                     System.out.print(stringG);
                     break;
                 }
-//Bracket below is the closure of the for loop.
             }
             System.out.println();
             
