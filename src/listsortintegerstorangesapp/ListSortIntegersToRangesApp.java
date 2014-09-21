@@ -21,6 +21,18 @@ public class ListSortIntegersToRangesApp {
     /**
      * @param args the command line arguments
      */
+    // Declare the variables before the if
+            static String stringA;
+            static String stringB;
+            static String stringC;
+            static String stringD;
+            static String stringE;
+            static String stringF;
+            static String stringG;
+            static String stringH;
+            static String stringI;
+            static String stringJ;
+            static String stringK;
     public static void main(String[] args) {
         //System.out.print("This thing is on");
         /** Create the range of numbers. Possibly later take an input for,
@@ -49,18 +61,7 @@ public class ListSortIntegersToRangesApp {
             }
             System.out.println();
 
-// Declare the variables before the if
-            String stringA;
-            String stringB;
-            String stringC;
-            String stringD;
-            String stringE;
-            String stringF;
-            String stringG;
-            String stringH;
-            String stringI;
-            String stringJ;
-            String stringK;
+//Declaring variables moved from here.
 
             //Printing out the list in the format required.
     //Below, added method which prints out the numbers in the format required. They may
@@ -127,8 +128,8 @@ public class ListSortIntegersToRangesApp {
                 }
 
             }
-            
             System.out.println();
+            System.out.println("A string: " + stringA + stringB + stringC + stringD + stringE + stringF + stringG + stringH + stringI + stringJ + stringK);
 
     }
        
