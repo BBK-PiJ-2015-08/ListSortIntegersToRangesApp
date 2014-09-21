@@ -50,8 +50,20 @@ public class ListSortIntegersToRangesApp {
             System.out.println();
             System.out.println();
 
+// Declare the variables before the if
+            String stringA = null;
+            String stringB = null;
+            String stringC = null;
+            String stringD = null;
+            String stringE = null;
+            String stringF = null;
+            String stringG = null;
+            String stringH = null;
+            String stringI = null;
+            String stringJ = null;
+            String stringK = null;
+
             //Printing out the list in the format required.
-            
     //Below, added method which prints out the numbers in the format required. They may
           //still be integers though. It does not work properly with negatives.
             for (int i = 0; i<7; i++ ) {
@@ -59,65 +71,63 @@ public class ListSortIntegersToRangesApp {
                 //When this is the case it will not print the current number, because to avoid duplicate numbers only the
                 //final identical number in the sorted sequence prints.
                 if(i<6 && i!=0 && numbers[i] == (numbers[i+1])) {
-                    String stringJ = Integer.toString(numbers[i]);
+                    stringJ = Integer.toString(numbers[i]);
                 }
                 else if (i==6) {
-                    String stringK = Integer.toString(numbers[i]);
+                    stringK = Integer.toString(numbers[i]);
                     System.out.print(stringK);
                     break;
                 }
                 else if (i==0 && numbers[i] != (numbers[i+1]-1)) {
                     //System.out.print(numbers[i]+",");
-                    String stringA = Integer.toString(numbers[i])+":";
+                    stringA = Integer.toString(numbers[i])+",";
                     //        new String(numbers[i]+",");
                     System.out.print(stringA);
                     
                 }
                 else if (i==0 && numbers[i] == (numbers[i+1]-1)) {
                     //System.out.print(numbers[i]+":");
-                    String stringB = Integer.toString(numbers[i])+":";
+                    stringB = Integer.toString(numbers[i])+":";
                     //      new String(numbers[i]+":");
                     System.out.print(stringB);
                 }
                 else if (i==0 && numbers[i] == numbers[i+1]) {
-                    String stringC = Integer.toString(numbers[i])+":";
+                    stringC = Integer.toString(numbers[i])+":";
                     System.out.print(stringC);
                 }
                 //If the current number is the same as the previous number and the next number, do not print anything.
                 else if (numbers[i] == numbers[i-1] && numbers[i] == numbers[i+1]){
-                    String stringD = Integer.toString(numbers[i]);
+                    stringD = Integer.toString(numbers[i]);
                     //      new String(numbers[i]);
                 }
                 //If the current number is preceded by a consecutive number and the current number is the same as the next number, don't print.
                 else if (numbers[i] == (numbers[i-1]+1) && numbers[i] == numbers[i+1]){
-                    String stringE = Integer.toString(numbers[i]);
+                    stringE = Integer.toString(numbers[i]);
                 }
                 //If the current number is the same as the previous number and followed by a consecutive number, don't print it.
                 else if (numbers[i] == (numbers[i-1]) && numbers[i] == (numbers[i+1])-1 ){
-                    String stringF = Integer.toString(numbers[i]);
+                    stringF = Integer.toString(numbers[i]);
                 }
                 else if(numbers[i] != (numbers[i+1]-1)) {
                     //System.out.print(numbers[i]+",");
-                    String stringG = Integer.toString(numbers[i])+",";
+                    stringG = Integer.toString(numbers[i])+",";
                     //      new String(numbers[i]+",");
                     System.out.print(stringG);
                 }
                 else if(numbers[i] == (numbers[i+1]-1) && numbers[i] != (numbers[i-1]+1) ) {
                     //System.out.print(numbers[i]+":");
-                    String stringH = Integer.toString(numbers[i])+":";
+                    stringH = Integer.toString(numbers[i])+":";
                     //      new String(numbers[i]+":");
                     System.out.print(stringH);
                 }
                 else if(numbers[i] == (numbers[i+1]-1) && numbers[i] == (numbers[i-1]+1) ) {
-                    String stringI = Integer.toString(numbers[i]);
+                    stringI = Integer.toString(numbers[i]);
                 }
 
             }
 
             System.out.println();
-            
 
     }
-
-        
+       
 }
