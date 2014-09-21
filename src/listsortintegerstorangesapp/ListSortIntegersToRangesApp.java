@@ -23,14 +23,14 @@ public class ListSortIntegersToRangesApp {
             static String string;
             static String masterString;
             static String ranges;
+            static int[] sequence;
 
     public static void main(String[] args) {
         int[] inputData = new int[] {1,3,4,6,7};
-//        ranges(inputData);
         System.out.println(ranges(inputData));
         
         String inputData2 = "1,3:4,6:7";
-        System.out.println(sequence(inputData2));
+        System.out.println(sequence(inputData2));     
         
     }
     /**
@@ -86,8 +86,17 @@ public class ListSortIntegersToRangesApp {
             return ranges;
     }
     static int[] sequence(String ranges) {
-        //int[] inputData = new int[] {1,3,4,6,7};
-        //String sequenceResult = new tring[] {1, 5, 6};
-        return ranges;
+        System.out.println(ranges);
+        String str = ranges;
+        String delims = "[,:]";
+        String[] intermediate = str.split(delims);
+        int[] testingthis = new int[intermediate.length];
+        
+        for (int i = 0; i < intermediate.length; i++) {
+            testingthis[i] = Integer.parseInt(intermediate[i]);
+            System.out.println(testingthis[i]);
+        }
+
+        return sequence;
     }
 }
