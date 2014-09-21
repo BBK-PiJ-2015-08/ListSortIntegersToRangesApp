@@ -28,6 +28,7 @@ public class ListSortIntegersToRangesApp {
     public static void main(String[] args) {
         int[] removeThis = new int[5];
         ranges(removeThis);
+        System.out.print(ranges(removeThis));
     }
     /**
      *
