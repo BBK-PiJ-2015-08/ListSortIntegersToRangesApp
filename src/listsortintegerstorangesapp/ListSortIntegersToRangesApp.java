@@ -23,6 +23,7 @@ public class ListSortIntegersToRangesApp {
             static String string;
             static String masterString;
             static String ranges;
+            static String sequence;
 
     public static void main(String[] args) {
         /** Ask user to decide the size of the array.**/        
@@ -98,15 +99,34 @@ public class ListSortIntegersToRangesApp {
             ranges = masterString;
             
             System.out.println("Ranges: "+ranges);
+            
+            //Attempting to convert the string back into an array
+            //int[] sequence = new int[5];
+            
+            //String[] sequence = ranges.split(",");
+            //for (int position = 0; position<sequence.length; position++){
+            //    if(sequence[position].equals(":")){
+            //        System.out.print("Uh oh");
+            //    }
+            //    else {
+            //        System.out.println("Array element contains "+sequence[position]);
+            //    }
+            //}
+
+            //int[] sequence = new int[numbers.length];
+            //System.out.println(sequence);
+            
+//            ranges();
     }
     /**
      *
      * @param numbers
      * @return
      */
-    public static String ranges(int[] numbers) {
+/**    static String ranges(int[] numbers) {
         return ranges;
     
     }
+    **/
 
 }
