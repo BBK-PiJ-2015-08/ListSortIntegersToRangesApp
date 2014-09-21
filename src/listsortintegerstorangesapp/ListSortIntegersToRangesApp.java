@@ -33,7 +33,7 @@ public class ListSortIntegersToRangesApp {
         removeThis[3] = 6;
         removeThis[4] = 7;
         ranges(removeThis);
-        System.out.print(ranges(removeThis));
+        System.out.println(ranges(removeThis));
     }
     /**
      *
