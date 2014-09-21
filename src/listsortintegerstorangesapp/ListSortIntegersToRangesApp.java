@@ -23,7 +23,6 @@ public class ListSortIntegersToRangesApp {
             static String string;
             static String masterString;
             static String ranges;
-            static String sequence;
 
     public static void main(String[] args) {
         int[] inputData = new int[] {1,3,4,6,7};
@@ -80,10 +79,9 @@ public class ListSortIntegersToRangesApp {
             }
             
             ranges = masterString;
-            
-        return ranges;
-    
+            return ranges;
     }
-    
-
+    static int[] sequence(String ranges) {
+        return sequence;
+    }
 }
