@@ -88,7 +88,7 @@ public class ListSortIntegersToRangesApp {
 
                 else if (i==1)   {
                     if (numbers[i] == numbers[i-1] || numbers[i] == numbers[i+1]) {
-                        stringB = Integer.toString(numbers[i])
+                        stringB = Integer.toString(numbers[i]);
                     }
                     else if(numbers[i] != (numbers[i+1]-1)) {
                         stringB = Integer.toString(numbers[i])+",";
