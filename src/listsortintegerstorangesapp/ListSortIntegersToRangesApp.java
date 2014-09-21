@@ -29,10 +29,6 @@ public class ListSortIntegersToRangesApp {
             static String stringE;
             static String stringF;
             static String stringG;
-            static String stringH;
-            static String stringI;
-            static String stringJ;
-            static String stringK;
 
     public static void main(String[] args) {
         //System.out.print("This thing is on");
@@ -203,18 +199,7 @@ public class ListSortIntegersToRangesApp {
             if (stringG != null) {
                 System.out.print(stringG);
             }
-            if (stringH != null) {
-                System.out.print(stringH);
-            }
-            if (stringI != null) {
-                System.out.print(stringI);
-            }
-            if (stringJ != null) {
-                System.out.print(stringJ);
-            }
-            if (stringK != null) {
-                System.out.print(stringK);
-            }
+            System.out.println();
             
 
     }
