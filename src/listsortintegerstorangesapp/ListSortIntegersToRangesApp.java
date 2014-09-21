@@ -26,8 +26,12 @@ public class ListSortIntegersToRangesApp {
 
     public static void main(String[] args) {
         int[] inputData = new int[] {1,3,4,6,7};
-        ranges(inputData);
+//        ranges(inputData);
         System.out.println(ranges(inputData));
+        
+        String inputData2 = "1,3:4,6:7";
+        System.out.println(sequence(inputData2));
+        
     }
     /**
      *
@@ -82,6 +86,8 @@ public class ListSortIntegersToRangesApp {
             return ranges;
     }
     static int[] sequence(String ranges) {
-        return sequence;
+        //int[] inputData = new int[] {1,3,4,6,7};
+        //String sequenceResult = new tring[] {1, 5, 6};
+        return ranges;
     }
 }
