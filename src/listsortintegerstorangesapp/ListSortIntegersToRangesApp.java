@@ -1,15 +1,3 @@
-/* 1) Implement the following method:
-
-// Convert a list of not-necessarily sequential
-// numbers into a comma-separated list of
-// ranges, of the format "from:to".
-
-    static string ranges(int[] numbers) {}
-
-// Example: ranges([1,2]) = "1:2"
-// Example: ranges([1,2,3,5]) = "1:3,5"
-// Example: ranges(1) = "1"
- */
 package listsortintegerstorangesapp;
 import java.util.*;
 import java.lang.*;
