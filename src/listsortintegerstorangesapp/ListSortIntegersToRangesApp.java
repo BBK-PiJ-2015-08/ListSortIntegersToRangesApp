@@ -17,10 +17,10 @@ public class ListSortIntegersToRangesApp {
 
     public static void main(String[] args) {
 
-        int[] inputData = new int[] {1,3,4,6,7};
+        int[] inputData = new int[] {1,3,4,5,7,8};
         System.out.println(ranges(inputData));
         
-        String inputData2 = "1,3:4,6:7";
+        String inputData2 = "1,3:5,7:8";
         System.out.println(java.util.Arrays.toString(sequence(inputData2)));
 //Take any of the 4-line chunks of code below out of comments to apply the methods to different ranges.         
 /**     
@@ -121,7 +121,6 @@ public class ListSortIntegersToRangesApp {
 //If there are numbers between left and right, add these to the array list.
                     else if ((Integer.parseInt(left)+1) != (Integer.parseInt(right)) ) {
                         int difference = ((Integer.parseInt(right))-(Integer.parseInt(left)));
-                        System.out.println("Difference: "+difference);
                         postRangeExpansion.add(left);
                         for (int j = 1; j < difference; j++) {
                             postRangeExpansion.add(Integer.toString(Integer.parseInt(right)+j-difference) );
