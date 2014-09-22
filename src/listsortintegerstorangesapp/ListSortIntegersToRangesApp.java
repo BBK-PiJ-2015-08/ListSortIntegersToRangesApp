@@ -8,12 +8,12 @@ public class ListSortIntegersToRangesApp {
     /**
      * @param args the command line arguments
      */
-            static String string;
-            static String masterString;
-            static String ranges;
-            static int[] sequence;
-            static String[] preRangeExpansion;
-            static ArrayList postRangeExpansion;
+    static String string;
+    static String masterString;
+    static String ranges;
+    static int[] sequence;
+    static String[] preRangeExpansion;
+    static ArrayList postRangeExpansion;
 
     public static void main(String[] args) {
 
