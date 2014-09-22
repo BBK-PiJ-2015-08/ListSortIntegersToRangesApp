@@ -16,37 +16,34 @@ public class ListSortIntegersToRangesApp {
             static ArrayList postRangeExpansion;
 
     public static void main(String[] args) {
-        
-/**        int[] inputData7 = new int[] {1,2,3,4,5};
-        System.out.println(ranges(inputData7));
-        
-        String inputData8 = "1:5";
-        System.out.println(sequence(inputData8)); 
-**/
+
         int[] inputData = new int[] {1,3,4,6,7};
         System.out.println(ranges(inputData));
         
         String inputData2 = "1,3:4,6:7";
-        System.out.println(sequence(inputData2));   
-//        for (int i = 0; i < sequence.length; i++) {
-//            System.out.println(sequence[i]);
-//        }
-        
-        
-//       Testing long ranges
-/**
-        int[] inputData3 = new int[] {1,3,4,5,10,11};
+        System.out.println(java.util.Arrays.toString(sequence(inputData2)));
+//Take any of the 4-line chunks of code below out of comments to apply the methods to different ranges.         
+/**     
+        int[] inputData3 = new int[] {1,2};
         System.out.println(ranges(inputData3));
-        
-        String inputData4 = "1,3:5,10:11";
-        System.out.println(sequence(inputData4));  
+        String inputData4 = "1:2";
+        System.out.println(java.util.Arrays.toString(sequence(inputData4)));
 
-        //Testing list of numbers with no ranges
-        int[] inputData5 = new int[] {1,3,5,11};
+        int[] inputData5 = new int[] {1,2,3,5};
         System.out.println(ranges(inputData5));
+        String inputData6 = "1:3,5";
+        System.out.println(java.util.Arrays.toString(sequence(inputData6)));
         
-        String inputData6 = "1,3,5,11";
-        System.out.println(sequence(inputData6)); 
+        int[] inputData7 = new int[] {1};
+        System.out.println(ranges(inputData7));
+        String inputData8 = "1";
+        System.out.println(java.util.Arrays.toString(sequence(inputData8)));
+
+//Testing list of numbers with no ranges
+        int[] inputData9 = new int[] {1,3,5,11};
+        System.out.println(ranges(inputData9));
+        String inputData10 = "1,3,5,11";
+        System.out.println(sequence(inputData10)); 
 **/        
     }
     /**
@@ -72,7 +69,6 @@ public class ListSortIntegersToRangesApp {
                         masterString = string;
                     }
                 }
-
                 else if (i>0 && i<(numbers.length)-1)   {
                     if (numbers[i] == numbers[i-1] || numbers[i] == numbers[i+1]) {
                         string = Integer.toString(numbers[i]);
@@ -149,8 +145,6 @@ public class ListSortIntegersToRangesApp {
         for (int i = 0; i < targetArray.length; i++) {
             sequenceArray[i] = Integer.parseInt(targetArray[i]);
         }
-        
-        int[] sequence = sequenceArray;
-        return sequence;
+        return sequenceArray;
     }
 }
