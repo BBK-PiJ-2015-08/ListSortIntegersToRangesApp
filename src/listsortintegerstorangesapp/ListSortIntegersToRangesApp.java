@@ -26,15 +26,23 @@ public class ListSortIntegersToRangesApp {
             static int[] sequence;
             static String[] preRangeExpansion;
             static ArrayList postRangeExpansion;
+            static String[] tokens;
 
     public static void main(String[] args) {
-        int[] inputData = new int[] {1,3,4,6,7};
+        
+        int[] inputData7 = new int[] {1,2,3};
+        System.out.println(ranges(inputData7));
+        
+        String inputData8 = "1:3";
+        System.out.println(sequence(inputData8));  
+
+        /**        int[] inputData = new int[] {1,3,4,6,7};
         System.out.println(ranges(inputData));
         
         String inputData2 = "1,3:4,6:7";
         System.out.println(sequence(inputData2));   
         
-/**        //Testing long ranges
+        //Testing long ranges
         int[] inputData3 = new int[] {1,3,4,5,10,11};
         System.out.println(ranges(inputData3));
         
@@ -113,7 +121,29 @@ public class ListSortIntegersToRangesApp {
             String divider = ":";
             //Can i change contains(divider) to contains(":")
             if (preRangeExpansion[i].contains(divider)) {
+                //A/ String[] newOut = string.split(":");
+                //Split current Array element
                 System.out.println("Oh no!");
+                //Attempt to split into left and right
+                String s = (preRangeExpansion[i]);
+                int p = s.indexOf(":");
+                if (p >= 0) {
+                    String left = s.substring(0, p);
+                    String right = s.substring(p+1);
+                    if ((Integer.parseInt(left)+1) == (Integer.parseInt(right)) ) {
+                        postRangeExpansion.add(left);
+                        postRangeExpansion.add(right);
+                    }
+                    else if ((Integer.parseInt(left)+2) == (Integer.parseInt(right)) ) {
+                        postRangeExpansion.add(left);
+                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+1));
+                        postRangeExpansion.add(right);
+                    }
+                    
+                }
+                //A/ System.out.println(newOut[0]);
+                //A/ postRangeExpansion.add(newOut[i]);
+                //preRange
             }
             else {
                 postRangeExpansion.add(preRangeExpansion[i]);            
