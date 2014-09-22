@@ -18,18 +18,18 @@ public class ListSortIntegersToRangesApp {
 
     public static void main(String[] args) {
         
-        /**int[] inputData7 = new int[] {1,2,3,4,5};
+        int[] inputData7 = new int[] {1,2,3,4,5};
         System.out.println(ranges(inputData7));
         
         String inputData8 = "1:5";
-        System.out.println(sequence(inputData8));**/  
+        System.out.println(sequence(inputData8)); 
 
         /**        int[] inputData = new int[] {1,3,4,6,7};
         System.out.println(ranges(inputData));
         
         String inputData2 = "1,3:4,6:7";
         System.out.println(sequence(inputData2));   
- **/       
+        
  //       Testing long ranges
         int[] inputData3 = new int[] {1,3,4,5,10,11};
         System.out.println(ranges(inputData3));
@@ -38,12 +38,12 @@ public class ListSortIntegersToRangesApp {
         System.out.println(sequence(inputData4));  
 
         //Testing list of numbers with no ranges
-//        int[] inputData5 = new int[] {1,3,5,11};
-//        System.out.println(ranges(inputData5));
+        int[] inputData5 = new int[] {1,3,5,11};
+        System.out.println(ranges(inputData5));
         
-//        String inputData6 = "1,3,5,11";
-//        System.out.println(sequence(inputData6)); 
-        
+        String inputData6 = "1,3,5,11";
+        System.out.println(sequence(inputData6)); 
+**/        
     }
     /**
      *
@@ -98,7 +98,7 @@ public class ListSortIntegersToRangesApp {
             return ranges;
     }
     static int[] sequence(String ranges) {
-        System.out.println(ranges);
+        //System.out.println(ranges);
         String rangesHolder = ranges;
         String delims = "[,]";
         String[] preRangeExpansion = rangesHolder.split(delims);
@@ -110,8 +110,6 @@ public class ListSortIntegersToRangesApp {
 //          String divider = ":";
             //Can i change contains(divider) to contains(":")
             if (preRangeExpansion[i].contains(":")) {
-                
-                System.out.println("Oh no!");
                 
                 //Attempt to split current Array element into left and right
                 String s = (preRangeExpansion[i]);
