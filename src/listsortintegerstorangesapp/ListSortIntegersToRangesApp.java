@@ -152,31 +152,6 @@ public class ListSortIntegersToRangesApp {
                 System.out.println(str);
         }
 
-        
-        //ArrayList postRangeExpansion = new ArrayList();
-        
-/**        for (int i = 0; i < preRangeExpansion.length; i++) {
-            if(i==1000) {
-                break;
-            }
-            else {
-                postRangeExpansion.add(preRangeExpansion);
-            }
-        }
-        System.out.println("Array elements: "+postRangeExpansion);
-        //int[] postRangeExpansion = 
-        
-        
-        String delims = "[,:]";
-        String[] intermediate = rangesHolder.split(delims);
-        int[] testingthis = new int[intermediate.length];
-        
-        for (int i = 0; i < intermediate.length; i++) {
-            testingthis[i] = Integer.parseInt(intermediate[i]);
-            System.out.println(testingthis[i]);
-            
-        }
-**/
         return sequence;
     }
 }
