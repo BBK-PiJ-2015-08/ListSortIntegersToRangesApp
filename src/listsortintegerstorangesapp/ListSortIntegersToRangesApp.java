@@ -118,10 +118,9 @@ public class ListSortIntegersToRangesApp {
         //Slightly weird style in this chunk below.
         ArrayList<String> postRangeExpansion = new ArrayList<String>(Arrays.asList(preRangeExpansion));
         for (int i = 0; i < preRangeExpansion.length; i++) {
-            String divider = ":";
+//          String divider = ":";
             //Can i change contains(divider) to contains(":")
-            if (preRangeExpansion[i].contains(divider)) {
-                //A/ String[] newOut = string.split(":");
+            if (preRangeExpansion[i].contains(":")) {
                 //Split current Array element
                 System.out.println("Oh no!");
                 //Attempt to split into left and right
@@ -130,6 +129,7 @@ public class ListSortIntegersToRangesApp {
                 if (p >= 0) {
                     String left = s.substring(0, p);
                     String right = s.substring(p+1);
+                    
                     if ((Integer.parseInt(left)+1) == (Integer.parseInt(right)) ) {
                         postRangeExpansion.add(left);
                         postRangeExpansion.add(right);
@@ -162,7 +162,7 @@ public class ListSortIntegersToRangesApp {
         //Unsure of this below bit (up to closure of opening curly bracket)
         for (String str: postRangeExpansion){
                 System.out.println(str);
-            }
+        }
 
         
         //ArrayList postRangeExpansion = new ArrayList();
