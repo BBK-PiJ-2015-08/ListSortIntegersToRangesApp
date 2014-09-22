@@ -24,13 +24,29 @@ public class ListSortIntegersToRangesApp {
             static String masterString;
             static String ranges;
             static int[] sequence;
+            static String[] preRangeExpansion;
+            static ArrayList postRangeExpansion;
 
     public static void main(String[] args) {
-        int[] inputData = new int[] {1,3,4,6,7};
+/**        int[] inputData = new int[] {1,3,4,6,7};
         System.out.println(ranges(inputData));
         
         String inputData2 = "1,3:4,6:7";
-        System.out.println(sequence(inputData2));     
+        System.out.println(sequence(inputData2));   
+        
+        //Testing long ranges
+        int[] inputData3 = new int[] {1,3,4,5,10,11};
+        System.out.println(ranges(inputData3));
+        
+        String inputData4 = "1,3:5,10:11";
+        System.out.println(sequence(inputData4));  
+**/
+        //Testing list of numbers with no ranges
+        int[] inputData5 = new int[] {1,3,5,11};
+        System.out.println(ranges(inputData5));
+        
+        String inputData6 = "1,3,5,11";
+        System.out.println(sequence(inputData6)); 
         
     }
     /**
@@ -87,16 +103,50 @@ public class ListSortIntegersToRangesApp {
     }
     static int[] sequence(String ranges) {
         System.out.println(ranges);
-        String str = ranges;
+        String rangesHolder = ranges;
+        String delims = "[,]";
+        String[] preRangeExpansion = rangesHolder.split(delims);
+        
+        //Slightly weird style in this chunk below.
+        ArrayList<String> postRangeExpansion = new ArrayList<String>(Arrays.asList(preRangeExpansion));
+        for (int i = 0; i < preRangeExpansion.length; i++) {
+            if (true) {
+                
+            }
+            else {
+                postRangeExpansion.add(preRangeExpansion[i]);            
+            }            
+        }
+        //Unsure of this below bit (up to closure of opening curly bracket)
+        for (String str: postRangeExpansion){
+                System.out.println(str);
+            }
+
+        
+        //ArrayList postRangeExpansion = new ArrayList();
+        
+/**        for (int i = 0; i < preRangeExpansion.length; i++) {
+            if(i==1000) {
+                break;
+            }
+            else {
+                postRangeExpansion.add(preRangeExpansion);
+            }
+        }
+        System.out.println("Array elements: "+postRangeExpansion);
+        //int[] postRangeExpansion = 
+        
+        
         String delims = "[,:]";
-        String[] intermediate = str.split(delims);
+        String[] intermediate = rangesHolder.split(delims);
         int[] testingthis = new int[intermediate.length];
         
         for (int i = 0; i < intermediate.length; i++) {
             testingthis[i] = Integer.parseInt(intermediate[i]);
             System.out.println(testingthis[i]);
+            
         }
-
+**/
         return sequence;
     }
 }
