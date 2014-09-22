@@ -14,7 +14,6 @@ public class ListSortIntegersToRangesApp {
             static int[] sequence;
             static String[] preRangeExpansion;
             static ArrayList postRangeExpansion;
-            static String[] tokens;
 
     public static void main(String[] args) {
         
@@ -139,8 +138,15 @@ public class ListSortIntegersToRangesApp {
                 postRangeExpansion.add(preRangeExpansion[i]);            
             }            
         }
+        
+        String[] targetArray = new String[postRangeExpansion.size()];
+        targetArray = postRangeExpansion.toArray(targetArray);
+        for (String s : targetArray){
+            System.out.println(s);
+        }
+            
         //Unsure of this below bit (up to closure of opening curly bracket)
-        for (String str: postRangeExpansion){
+/**        for (String str: postRangeExpansion){
                 System.out.println(str);
         }
         
@@ -153,7 +159,7 @@ public class ListSortIntegersToRangesApp {
         
         System.out.println("Int array: "+sequence[1]);
 
-        
+**/        
         return sequence;
     }
 }
