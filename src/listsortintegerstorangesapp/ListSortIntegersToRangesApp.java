@@ -28,6 +28,10 @@ public class ListSortIntegersToRangesApp {
         
         String inputData2 = "1,3:4,6:7";
         System.out.println(sequence(inputData2));   
+//        for (int i = 0; i < sequence.length; i++) {
+//            System.out.println(sequence[i]);
+//        }
+        
         
 //       Testing long ranges
 /**
@@ -99,20 +103,15 @@ public class ListSortIntegersToRangesApp {
     }
     
     static int[] sequence(String ranges) {
-//System.out.println(ranges);
         String rangesHolder = ranges;
         String delims = "[,]";
         String[] preRangeExpansion = rangesHolder.split(delims);
         
-//Slightly weird style in this chunk below.
         ArrayList<String> postRangeExpansion = new ArrayList<String>();
-//        ArrayList<String> postRangeExpansion = new ArrayList<String>(Arrays.asList(preRangeExpansion));
         for (int i = 0; i < preRangeExpansion.length; i++) {
-//          String divider = ":";
-//Can i change contains(divider) to contains(":")
-            if (preRangeExpansion[i].contains(":")) {
-                
-//Attempt to split current Array element into left and right
+            
+            if (preRangeExpansion[i].contains(":")) {                
+//Split current Array element into two by where ':' is
                 String s = (preRangeExpansion[i]);
                 int p = s.indexOf(":");
                 if (p >= 0) {
@@ -123,7 +122,7 @@ public class ListSortIntegersToRangesApp {
                         postRangeExpansion.add(left);
                         postRangeExpansion.add(right);
                     }
-
+//If there are numbers between left and right, add these to the array list.
                     else if ((Integer.parseInt(left)+1) != (Integer.parseInt(right)) ) {
                         int difference = ((Integer.parseInt(right))-(Integer.parseInt(left)));
                         System.out.println("Difference: "+difference);
@@ -145,14 +144,13 @@ public class ListSortIntegersToRangesApp {
             System.out.println(s);
         }
         
-//Attempting to convert String[] array to int[] array
+//Convert String[] array to int[] array
         int[] sequenceArray = new int[targetArray.length];
         for (int i = 0; i < targetArray.length; i++) {
             sequenceArray[i] = Integer.parseInt(targetArray[i]);
         }
-//        System.out.println(sequenceArray[1]);
         
-        sequence = sequenceArray;
+        int[] sequence = sequenceArray;
         return sequence;
     }
 }
