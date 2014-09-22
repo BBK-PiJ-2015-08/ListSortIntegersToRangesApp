@@ -139,12 +139,12 @@ public class ListSortIntegersToRangesApp {
             }            
         }
         
-        String[] targetArray = new String[postRangeExpansion.size()];
-        targetArray = postRangeExpansion.toArray(targetArray);
+        String[] targetArray = postRangeExpansion.toArray(new String[0]);
         for (String s : targetArray){
             System.out.println(s);
         }
-            
+        
+          
         //Unsure of this below bit (up to closure of opening curly bracket)
 /**        for (String str: postRangeExpansion){
                 System.out.println(str);
