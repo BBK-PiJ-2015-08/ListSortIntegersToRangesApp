@@ -123,7 +123,7 @@ public class ListSortIntegersToRangesApp {
                         postRangeExpansion.add(left);
                         postRangeExpansion.add(right);
                     }
-                    //Rewriting the flubby bit.
+
                     else if ((Integer.parseInt(left)+1) != (Integer.parseInt(right)) ) {
                         int difference = ((Integer.parseInt(right))-(Integer.parseInt(left)));
                         System.out.println("Difference: "+difference);
@@ -133,27 +133,6 @@ public class ListSortIntegersToRangesApp {
                         }
                         postRangeExpansion.add(right);
                     }
-                    /**
-                    else if ((Integer.parseInt(left)+2) == (Integer.parseInt(right)) ) {
-                        postRangeExpansion.add(left);
-                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+1));
-                        postRangeExpansion.add(right);
-                    }
-                    else if ((Integer.parseInt(left)+3) == (Integer.parseInt(right)) ) {
-                        postRangeExpansion.add(left);
-                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+1));
-                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+2));
-                        postRangeExpansion.add(right);
-                    }
-                    else if ((Integer.parseInt(left)+4) == (Integer.parseInt(right)) ) {
-                        postRangeExpansion.add(left);
-                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+1));
-                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+2));
-                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+3));
-                        postRangeExpansion.add(right);
-                    }
-                    **/
-                    
                 }
             }
             else {
@@ -164,10 +143,17 @@ public class ListSortIntegersToRangesApp {
         for (String str: postRangeExpansion){
                 System.out.println(str);
         }
-        for (int i = 0; i < 10; i++) {
-            sequence[i] = Integer.parseInt(postRangeExpansion[i]);
+        
+        String[] intermediate=postRangeExpansion.toArray(new String[postRangeExpansion.size()]);
+        int[] sequence = new int[intermediate.length];
+        int i=0;
+        for(String stringo : intermediate){
+            sequence[i++] = Integer.parseInt(stringo);
         }
+        
+        System.out.println("Int array: "+sequence[1]);
 
+        
         return sequence;
     }
 }
