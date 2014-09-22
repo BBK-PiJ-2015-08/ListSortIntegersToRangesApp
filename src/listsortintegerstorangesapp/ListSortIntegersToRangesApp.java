@@ -104,14 +104,16 @@ public class ListSortIntegersToRangesApp {
         String[] preRangeExpansion = rangesHolder.split(delims);
         
         //Slightly weird style in this chunk below.
-        ArrayList<String> postRangeExpansion = new ArrayList<String>(Arrays.asList(preRangeExpansion));
+        ArrayList<String> postRangeExpansion = new ArrayList<String>();
+//        ArrayList<String> postRangeExpansion = new ArrayList<String>(Arrays.asList(preRangeExpansion));
         for (int i = 0; i < preRangeExpansion.length; i++) {
 //          String divider = ":";
             //Can i change contains(divider) to contains(":")
             if (preRangeExpansion[i].contains(":")) {
-                //Split current Array element
+                
                 System.out.println("Oh no!");
-                //Attempt to split into left and right
+                
+                //Attempt to split current Array element into left and right
                 String s = (preRangeExpansion[i]);
                 int p = s.indexOf(":");
                 if (p >= 0) {
