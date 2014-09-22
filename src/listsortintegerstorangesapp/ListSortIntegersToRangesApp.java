@@ -139,27 +139,19 @@ public class ListSortIntegersToRangesApp {
             }            
         }
         
-        String[] targetArray = postRangeExpansion.toArray(new String[0]);
+        String[] targetArray = postRangeExpansion.toArray(new String[postRangeExpansion.size()]);
         for (String s : targetArray){
             System.out.println(s);
         }
         
-          
-        //Unsure of this below bit (up to closure of opening curly bracket)
-/**        for (String str: postRangeExpansion){
-                System.out.println(str);
+        //Attempting to convert String[] array to int[] array
+        int[] sequenceArray = new int[targetArray.length];
+        for (int i = 0; i < targetArray.length; i++) {
+            sequenceArray[i] = Integer.parseInt(targetArray[i]);
         }
+        System.out.println(sequenceArray[1]);
         
-        String[] intermediate=postRangeExpansion.toArray(new String[postRangeExpansion.size()]);
-        int[] sequence = new int[intermediate.length];
-        int i=0;
-        for(String stringo : intermediate){
-            sequence[i++] = Integer.parseInt(stringo);
-        }
-        
-        System.out.println("Int array: "+sequence[1]);
-
-**/        
+        sequence = sequenceArray;
         return sequence;
     }
 }
