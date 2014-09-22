@@ -28,13 +28,13 @@ public class ListSortIntegersToRangesApp {
             static ArrayList postRangeExpansion;
 
     public static void main(String[] args) {
-/**        int[] inputData = new int[] {1,3,4,6,7};
+        int[] inputData = new int[] {1,3,4,6,7};
         System.out.println(ranges(inputData));
         
         String inputData2 = "1,3:4,6:7";
         System.out.println(sequence(inputData2));   
         
-        //Testing long ranges
+/**        //Testing long ranges
         int[] inputData3 = new int[] {1,3,4,5,10,11};
         System.out.println(ranges(inputData3));
         
@@ -42,11 +42,11 @@ public class ListSortIntegersToRangesApp {
         System.out.println(sequence(inputData4));  
 **/
         //Testing list of numbers with no ranges
-        int[] inputData5 = new int[] {1,3,5,11};
-        System.out.println(ranges(inputData5));
+//        int[] inputData5 = new int[] {1,3,5,11};
+//        System.out.println(ranges(inputData5));
         
-        String inputData6 = "1,3,5,11";
-        System.out.println(sequence(inputData6)); 
+//        String inputData6 = "1,3,5,11";
+//        System.out.println(sequence(inputData6)); 
         
     }
     /**
@@ -110,8 +110,10 @@ public class ListSortIntegersToRangesApp {
         //Slightly weird style in this chunk below.
         ArrayList<String> postRangeExpansion = new ArrayList<String>(Arrays.asList(preRangeExpansion));
         for (int i = 0; i < preRangeExpansion.length; i++) {
-            if (true) {
-                
+            String divider = ":";
+            //Can i change contains(divider) to contains(":")
+            if (preRangeExpansion[i].contains(divider)) {
+                System.out.println("Oh no!");
             }
             else {
                 postRangeExpansion.add(preRangeExpansion[i]);            
