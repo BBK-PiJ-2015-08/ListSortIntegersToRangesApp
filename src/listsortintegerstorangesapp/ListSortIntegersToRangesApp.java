@@ -30,10 +30,10 @@ public class ListSortIntegersToRangesApp {
 
     public static void main(String[] args) {
         
-        int[] inputData7 = new int[] {1,2,3};
+        int[] inputData7 = new int[] {1,2,3,4,5};
         System.out.println(ranges(inputData7));
         
-        String inputData8 = "1:3";
+        String inputData8 = "1:5";
         System.out.println(sequence(inputData8));  
 
         /**        int[] inputData = new int[] {1,3,4,6,7};
@@ -139,11 +139,21 @@ public class ListSortIntegersToRangesApp {
                         postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+1));
                         postRangeExpansion.add(right);
                     }
+                    else if ((Integer.parseInt(left)+3) == (Integer.parseInt(right)) ) {
+                        postRangeExpansion.add(left);
+                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+1));
+                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+2));
+                        postRangeExpansion.add(right);
+                    }
+                    else if ((Integer.parseInt(left)+4) == (Integer.parseInt(right)) ) {
+                        postRangeExpansion.add(left);
+                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+1));
+                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+2));
+                        postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+3));
+                        postRangeExpansion.add(right);
+                    }
                     
                 }
-                //A/ System.out.println(newOut[0]);
-                //A/ postRangeExpansion.add(newOut[i]);
-                //preRange
             }
             else {
                 postRangeExpansion.add(preRangeExpansion[i]);            
