@@ -97,6 +97,7 @@ public class ListSortIntegersToRangesApp {
             ranges = masterString;
             return ranges;
     }
+    
     static int[] sequence(String ranges) {
         //System.out.println(ranges);
         String rangesHolder = ranges;
@@ -122,6 +123,17 @@ public class ListSortIntegersToRangesApp {
                         postRangeExpansion.add(left);
                         postRangeExpansion.add(right);
                     }
+                    //Rewriting the flubby bit.
+                    else if ((Integer.parseInt(left)+1) != (Integer.parseInt(right)) ) {
+                        int difference = ((Integer.parseInt(right))-(Integer.parseInt(left)));
+                        System.out.println("Difference: "+difference);
+                        postRangeExpansion.add(left);
+                        for (int j = 1; j < difference; j++) {
+                            postRangeExpansion.add(Integer.toString(Integer.parseInt(right)+j-difference) );
+                        }
+                        postRangeExpansion.add(right);
+                    }
+                    /**
                     else if ((Integer.parseInt(left)+2) == (Integer.parseInt(right)) ) {
                         postRangeExpansion.add(left);
                         postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+1));
@@ -140,6 +152,7 @@ public class ListSortIntegersToRangesApp {
                         postRangeExpansion.add(Integer.toString(Integer.parseInt(left)+3));
                         postRangeExpansion.add(right);
                     }
+                    **/
                     
                 }
             }
@@ -150,6 +163,9 @@ public class ListSortIntegersToRangesApp {
         //Unsure of this below bit (up to closure of opening curly bracket)
         for (String str: postRangeExpansion){
                 System.out.println(str);
+        }
+        for (int i = 0; i < 10; i++) {
+            sequence[i] = Integer.parseInt(postRangeExpansion[i]);
         }
 
         return sequence;
